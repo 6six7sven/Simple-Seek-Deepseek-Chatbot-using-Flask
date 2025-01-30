@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <div id="chatbox">
+        <h2> ChatSeek</h2>
+        <div id="messages"></div>
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        async function sendMessage() {
+    const userInput = document.getElementById('userInput').value;
+    const messagesDiv = document.getElementById('messages');
+
+    messagesDiv.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
+
+    const response = await fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userInput }),
+    });
+
+    const data = await response.json();
+    console.log("DEBUG: Frontend received:", data);  // Debugging line
+
+    if (data.response) {
+        messagesDiv.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
+    } else {
+        messagesDiv.innerHTML += `<p><strong>Error:</strong> ${data.error || "undefined"}</p>`;
+    }
+
+    document.getElementById('userInput').value = '';
+}
+
+    </script>
+</body>
+</html>

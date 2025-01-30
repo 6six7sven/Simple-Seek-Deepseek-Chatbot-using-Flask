@@ -1,0 +1,89 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chatbot Container */
+#chatbox {
+    width: 400px;
+    max-width: 90%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chat Messages */
+#messages {
+    height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* User and Bot Messages */
+#messages p {
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+#messages p strong {
+    display: block;
+}
+
+/* User Message (Right-aligned) */
+#messages p:nth-child(odd) {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Bot Message (Left-aligned) */
+#messages p:nth-child(even) {
+    background: #e0e0e0;
+    color: black;
+    text-align: left;
+    margin-right: auto;
+}
+
+/* Input and Button Container */
+#input-area {
+    display: flex;
+    gap: 10px;
+}
+
+/* Input Field */
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Send Button */
+button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
