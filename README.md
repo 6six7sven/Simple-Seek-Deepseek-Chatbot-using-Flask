@@ -1,6 +1,6 @@
 # Chatbot Application
 
-This is a simple chatbot application built using Flask. The application allows users to interact with a chatbot through a web interface. You must install Ollama and your desired LLM model beforehand.
+This is a simple chatbot application built using Flask. The application allows users to interact with an LLM through a chatbot interface. You must install Ollama and your desired LLM model beforehand.
 
 - ## Ollama: [Ollama Download](https://ollama.com/download)
 
