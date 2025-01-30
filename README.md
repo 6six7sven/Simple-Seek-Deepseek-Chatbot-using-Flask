@@ -85,7 +85,3 @@ Debugging lines are included in both the frontend and backend to help trace the 
 
 - In [app.py](http://_vscodecontentref_/9), the backend response is printed before being sent to the frontend.
 - In [index.html](http://_vscodecontentref_/10), the frontend logs the received data to the console.
-
-## License
-
-This project is licensed under the MIT License.
